@@ -1,0 +1,6 @@
+{
+  "name": "Instituto Educativo Stoikheia",
+  "description": "Landing page institucional para el Instituto Educativo Stoikheia: Educación primaria con cercanía, atención personalizada y contención emocional.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
