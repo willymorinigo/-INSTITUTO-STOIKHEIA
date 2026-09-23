@@ -72,24 +72,32 @@ export const InterviewModal: React.FC<InterviewModalProps> = ({ isOpen, onClose 
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-200">
+    <div
+      className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-6 overflow-y-auto bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-200"
+      onClick={resetAndClose}
+    >
       <div
-        className="relative w-full max-w-xl bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden my-8 animate-in zoom-in-95 duration-200"
+        className="relative w-full max-w-xl bg-white rounded-t-[2rem] sm:rounded-3xl shadow-2xl border border-slate-100 overflow-hidden max-h-[92vh] sm:max-h-[90vh] flex flex-col my-0 sm:my-8 animate-in slide-in-from-bottom-6 sm:zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
+        {/* Mobile handle indicator */}
+        <div className="sm:hidden pt-3 pb-1 flex justify-center bg-[#1e5ca7]">
+          <div className="w-10 h-1 bg-white/40 rounded-full" />
+        </div>
+
         {/* Header */}
-        <div className="bg-gradient-to-r from-[#1e5ca7] to-[#164885] px-6 py-5 text-white flex items-center justify-between">
+        <div className="bg-gradient-to-r from-[#1e5ca7] to-[#164885] px-5 sm:px-6 py-4 sm:py-5 text-white flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
             <img
               src="/favicon.svg"
               alt="Stoikheia"
-              className="w-9 h-9 object-contain rounded-full bg-white p-0.5 shadow-xs"
+              className="w-8 h-8 sm:w-9 sm:h-9 object-contain rounded-full bg-white p-0.5 shadow-xs"
             />
             <div>
-              <h3 className="text-lg font-bold font-display leading-tight">
+              <h3 className="text-base sm:text-lg font-bold font-display leading-tight">
                 Agendá una Entrevista
               </h3>
-              <p className="text-xs text-blue-100">
+              <p className="text-[11px] sm:text-xs text-blue-100">
                 Instituto Educativo Stoikheia · Primaria
               </p>
             </div>
@@ -103,8 +111,8 @@ export const InterviewModal: React.FC<InterviewModalProps> = ({ isOpen, onClose 
           </button>
         </div>
 
-        {/* Content */}
-        <div className="p-6 sm:p-8">
+        {/* Content with smooth overflow scroll */}
+        <div className="p-5 sm:p-8 overflow-y-auto overscroll-contain">
           {submitted ? (
             <div className="text-center py-4 space-y-4">
               <div className="w-14 h-14 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center">

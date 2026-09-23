@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
   Check,
   HelpCircle,
-  Sparkles,
   Heart,
   ShieldCheck,
   Users,

@@ -16,6 +16,7 @@ import { ContactSection } from './components/ContactSection.tsx';
 import { Footer } from './components/Footer.tsx';
 import { InterviewModal } from './components/InterviewModal.tsx';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp.tsx';
+import { MobileBottomNav } from './components/MobileBottomNav.tsx';
 
 export default function App() {
   const [interviewModalOpen, setInterviewModalOpen] = useState(false);
@@ -29,7 +30,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-slate-800 flex flex-col selection:bg-[#1e5ca7]/20 selection:text-[#b21f2f]">
+    <div className="min-h-screen bg-white text-slate-800 flex flex-col selection:bg-[#1e5ca7]/20 selection:text-[#b21f2f] pb-14 sm:pb-0">
       {/* Navigation */}
       <Navbar onOpenInterview={handleOpenInterview} />
 
@@ -71,6 +72,9 @@ export default function App() {
 
       {/* Floating WhatsApp Action */}
       <FloatingWhatsApp />
+
+      {/* Mobile App Bottom Navigation Bar */}
+      <MobileBottomNav onOpenInterview={handleOpenInterview} />
     </div>
   );
 }

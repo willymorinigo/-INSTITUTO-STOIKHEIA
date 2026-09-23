@@ -6,7 +6,7 @@ import {
   Scale,
   Building2,
   CheckCircle,
-  Sparkles,
+  Award,
   ArrowRight,
 } from 'lucide-react';
 
@@ -76,7 +76,7 @@ export const Strengths: React.FC<StrengthsProps> = ({ onOpenInterview }) => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
           <div className="inline-flex items-center gap-2 text-xs font-semibold text-[#b21f2f] tracking-wide uppercase">
-            <Sparkles className="w-3.5 h-3.5" />
+            <Award className="w-3.5 h-3.5" />
             <span>Puntos Fuertes</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold font-display text-slate-900 tracking-tight">

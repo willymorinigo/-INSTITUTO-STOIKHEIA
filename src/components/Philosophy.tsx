@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeartHandshake, Smile, BookOpen, Sparkles, Compass } from 'lucide-react';
+import { HeartHandshake, Smile, BookOpen, Compass } from 'lucide-react';
 import galeria02Image from '../assets/images/galeria_02.jpg';
 
 interface PhilosophyProps {

@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Instagram,
-  Sparkles,
+  Compass,
   ArrowUpRight,
 } from 'lucide-react';
 import galeria01Image from '../assets/images/galeria_01.jpg';
@@ -65,7 +65,7 @@ export const CommunityLife: React.FC = () => {
             {/* Right Community Invitation Details */}
             <div className="lg:col-span-5 p-6 sm:p-8 lg:p-10 space-y-5">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-medium text-blue-200 backdrop-blur-xs">
-                <Sparkles className="w-3.5 h-3.5 text-[#1e5ca7]" />
+                <Compass className="w-3.5 h-3.5 text-[#1e5ca7]" />
                 <span>Nuestra Cultura Escolar</span>
               </div>
 

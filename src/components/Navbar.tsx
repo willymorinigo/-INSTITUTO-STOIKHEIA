@@ -85,16 +85,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInterview }) => {
         </div>
       </div>
 
-      {/* Mobile dropdown menu */}
+      {/* Mobile dropdown menu with app-sheet styling */}
       {mobileMenuOpen && (
-        <div className="sm:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-3 animate-in fade-in slide-in-from-top-2 duration-200 shadow-lg">
-          <nav className="flex flex-col space-y-2">
+        <div className="sm:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200/90 px-5 pt-3 pb-6 space-y-3 rounded-b-3xl animate-in fade-in slide-in-from-top-2 duration-200 shadow-xl">
+          <nav className="flex flex-col space-y-1">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2 text-base font-medium text-slate-700 hover:text-[#1e5ca7] hover:bg-slate-50 rounded-lg transition-colors"
+                className="px-3.5 py-2.5 text-sm font-semibold text-slate-700 hover:text-[#1e5ca7] active:bg-blue-50/70 hover:bg-slate-50 rounded-xl transition-all"
               >
                 {link.name}
               </a>
@@ -106,7 +106,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInterview }) => {
                 setMobileMenuOpen(false);
                 onOpenInterview();
               }}
-              className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-semibold text-white bg-[#b21f2f] rounded-lg shadow-sm"
+              className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 text-sm font-bold text-white bg-[#b21f2f] hover:bg-[#961927] active:scale-[0.98] rounded-xl shadow-md transition-all"
             >
               <Calendar className="w-4 h-4" />
               <span>Agendá una entrevista</span>
@@ -115,7 +115,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInterview }) => {
               href="https://wa.me/5492664037117?text=Hola%20Instituto%20Stoikheia%2C%20quisiera%20consultar%20sobre%20vacantes%20y%20conocer%20la%20propuesta."
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-semibold text-slate-800 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors"
+              className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 text-xs font-semibold text-slate-800 bg-slate-100 hover:bg-slate-200 active:scale-[0.98] rounded-xl transition-all"
             >
               <MessageCircle className="w-4 h-4 text-emerald-600" />
               <span>Contactar por WhatsApp (2664037117)</span>
